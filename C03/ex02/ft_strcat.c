@@ -1,31 +1,33 @@
-
-/* ************************************************************************** */
+/******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dbobrov <dbobrov@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/06 21:12:30 by dbobrov           #+#    #+#             */
-/*   Updated: 2025/09/06 21:12:30 by dbobrov          ###   ########.fr       */
+/*   Created: 2025/09/08 16:52:20 by dbobrov           #+#    #+#             */
+/*   Updated: 2025/09/08 16:57:08 by dbobrov          ###   ########.fr       */
 /*                                                                            */
-/* ************************************************************************** */
+/******************************************************************************/
 
-char *ft_strcat(char *dest, char *src);
+char	*ft_strcat(char *dest, char *src);
 
-char *ft_strcat(char *dest, char *src)
+char	*ft_strcat(char *dest, char *src)
 {
-    int i = 0;
-    while (dest[i])
-        i++;
+	int	i;
+	int	j;
 
-    int j = 0;
-    while (src[j])
-    {
-        dest[i+j] = src[j];
-        j++;
-    }
+	i = 0;
+	while (dest[i])
+		i++;
 
-    dest[i+j] = '\0';
-    return dest;
+	j = 0;
+	while (src[j])
+	{
+		dest[i + j] = src[j];
+		j++;
+	}
+
+	dest[i + j] = '\0';
+	return (dest);
 }
