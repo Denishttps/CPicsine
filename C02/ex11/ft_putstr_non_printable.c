@@ -18,9 +18,10 @@ void	ft_putstr_non_printable(char *str)
 {
 	int		i;
 	char	hex[3];
+	char	*hex_digits;
 
-	char	hex_digits[] = "0123456789abcdef";
-
+	hex_digits = "0123456789abcdef";
+	i = 0;
 	while (str[i])
 	{
 		if (str[i] < ' ' && str[i] > '~')
