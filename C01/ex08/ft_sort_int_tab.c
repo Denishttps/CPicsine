@@ -1,28 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbobrov <dbobrov@student.42.fr>            +#+  +:+       +#+        */
+/*   By: dbobrov <dbobrov@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 15:11:46 by dbobrov           #+#    #+#             */
-/*   Updated: 2025/09/08 16:13:35 by dbobrov          ###   ########.fr       */
+/*   Updated: 2025/09/10 16:10:58 by dbobrov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putstr(char *str);
+void	ft_sort_int_tab(int *tab, int size);
 
-int	ft_strlen(char *str)
+void	ft_sort_int_tab(int *tab, int size)
 {
 	int	i;
+	int	j;
+	int	temp;
 
 	i = 0;
-	while (str[i])
+	while (i < size - 1)
+	{
+		j = 0;
+		while (j < size - 1 - i)
+		{
+			if (tab[j] > tab[j + 1])
+			{
+				temp = tab[j];
+				tab[j] = tab[j + 1];
+				tab[j + 1] = temp;
+			}
+			j++;
+		}
 		i++;
-	return (i);
-}
-
-void	ft_putstr(char *str)
-{
-	write(1, *str, ft_strlen(*str));
+	}
 }

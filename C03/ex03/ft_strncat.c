@@ -14,8 +14,8 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb);
 
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	int	i;
-	int	j;
+	unsigned int	i;
+	unsigned int	j;
 
 	i = 0;
 	while (dest[i])
