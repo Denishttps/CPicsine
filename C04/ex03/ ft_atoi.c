@@ -6,7 +6,7 @@
 /*   By: dbobrov <dbobrov@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/10 17:41:37 by dbobrov           #+#    #+#             */
-/*   Updated: 2025/09/10 19:01:57 by dbobrov          ###   ########.fr       */
+/*   Updated: 2025/09/10 19:08:38 by dbobrov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,20 +35,17 @@ char	*get_space_index(char *str)
 int	get_signet(char *str)
 {
 	int	i;
-	int	is_loop;
 	int	sig;
 
 	sig = 1;
-	is_loop = 1;
 	i = 0;
-	while (str[i] && is_loop)
+	while (str[i])
 	{
-		if (!(str[i] == '+' || str[i] == "-"))
+		if (str[i] == '+' || str[i] == "-")
 		{
-			is_loop = 0;
-			continue ;
+			sig += (str[i] - '+') / -2;
+			str++;
 		}
-		sig += (str[i] - '+') / -2;
 		i++;
 	}
 	return (sig);
@@ -56,5 +53,15 @@ int	get_signet(char *str)
 
 int	ft_atoi(char *str)
 {
+	int	sig;
+	int	i;
+
+	get_space_index(str);
+	sig = get_signet(str);
+	i = 0;
+	while (str[i])
+	{
+		/* code */
+	}
 	
 }
