@@ -24,16 +24,17 @@ void	ft_putstr_non_printable(char *str)
 	i = 0;
 	while (str[i])
 	{
-		if (str[i] < ' ' && str[i] > '~')
+		if (str[i] >= ' ' && str[i] <= '~')
 		{
 			write(1, &str[i], 1);
-			i++;
-			continue ;
 		}
-		hex[0] = '\\';
-		hex[1] = hex_digits[(str[i] >> 4) & 15];
-		hex[2] = hex_digits[str[i] & 15];
-		write(1, hex, 3);
+		else
+		{
+			hex[0] = '\\';
+			hex[1] = hex_digits[(str[i] >> 4) & 15];
+			hex[2] = hex_digits[str[i] & 15];
+			write(1, hex, 3);
+		}
 		i++;
 	}
 }

@@ -10,16 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strupcase(char *str);
+char	*ft_strlowcase(char *str);
 
-char	*ft_strupcase(char *str)
+char	*ft_strlowcase(char *str)
 {
 	int	i;
 
 	i = 0;
 	while (str[i])
 	{
-		if (str[i] >= 'a' && str[i] <= 'z')
+		if (str[i] >= 'A' && str[i] <= 'Z')
 			str[i] = str[i] - 'A' + 'a';
 		i++;
 	}

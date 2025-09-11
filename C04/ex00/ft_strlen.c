@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dbobrov <dbobrov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/08 15:11:46 by dbobrov           #+#    #+#             */
-/*   Updated: 2025/09/08 16:13:35 by dbobrov          ###   ########.fr       */
+/*   Created: 2025/09/08 15:48:57 by dbobrov           #+#    #+#             */
+/*   Updated: 2025/09/08 15:55:31 by dbobrov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putstr(char *str);
+int	ft_strlen(char *str);
 
 int	ft_strlen(char *str)
 {
@@ -20,9 +20,4 @@ int	ft_strlen(char *str)
 	while (str[i])
 		i++;
 	return (i);
-}
-
-void	ft_putstr(char *str)
-{
-	write(1, *str, ft_strlen(*str));
 }

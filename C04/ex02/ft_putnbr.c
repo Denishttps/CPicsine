@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbobrov <dbobrov@student.42.fr>            +#+  +:+       +#+        */
+/*   By: dbobrov <dbobrov@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/08 15:38:27 by dbobrov           #+#    #+#             */
-/*   Updated: 2025/09/08 15:38:30 by dbobrov          ###   ########.fr       */
+/*   Created: 2025/09/10 17:03:57 by dbobrov           #+#    #+#             */
+/*   Updated: 2025/09/10 17:25:46 by dbobrov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_numbers(void);
+void	ft_putnbr(int nb);
 
-void	ft_print_numbers(void)
+void	ft_putnbr(int nb)
 {
-	char	digit;
+	char	c;
 
-	digit = '1';
-	while (digit <= '9')
+	if (nb == -2147483648)
 	{
-		write(1, &digit, 1);
-		digit++;
+		write(1, "-2147483648", 11);
 	}
+	if (nb < 0)
+		write(1, "-", 1);
+	if (nb >= 10)
+		ft_putnbr(nb / 10);
+	c = nb % 10 + '0';
+	write(1, &c, 1);
 }

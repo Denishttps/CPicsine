@@ -43,6 +43,7 @@ char	*ft_strstr(char *str, char *to_find)
 			j++;
 		if (j == len_find)
 			return (&str[i]);
+		i++;
 	}
 	return (NULL);
 }
