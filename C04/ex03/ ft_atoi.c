@@ -6,7 +6,7 @@
 /*   By: dbobrov <dbobrov@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/10 17:41:37 by dbobrov           #+#    #+#             */
-/*   Updated: 2025/09/13 23:29:14 by dbobrov          ###   ########.fr       */
+/*   Updated: 2025/09/14 15:01:06 by dbobrov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_atoi(char *str)
 
 	sig = 1;
 	num = 0;
-	while (*str == ' ' || (*str >= 9 && *str <= '13')) str++;
+	while (*str == ' ' || (*str >= 9 && *str <= 13)) str++;
 	while (*str == '+' || *str == '-')
 	{
 		sig *= 1 - 2 * (*str == '-');
