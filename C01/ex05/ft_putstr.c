@@ -6,9 +6,11 @@
 /*   By: dbobrov <dbobrov@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 15:11:46 by dbobrov           #+#    #+#             */
-/*   Updated: 2025/09/10 15:41:28 by dbobrov          ###   ########.fr       */
+/*   Updated: 2025/09/15 18:38:04 by dbobrov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <unistd.h>
 
 void	ft_putstr(char *str);
 
