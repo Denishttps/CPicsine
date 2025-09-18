@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbobrov <dbobrov@student.42.fr>            +#+  +:+       +#+        */
+/*   By: dbobrov <dbobrov@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 15:39:06 by dbobrov           #+#    #+#             */
-/*   Updated: 2025/09/08 15:39:09 by dbobrov          ###   ########.fr       */
+/*   Updated: 2025/09/18 12:51:40 by dbobrov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@ void	ft_swap(int *a, int *b);
 
 void	ft_swap(int *a, int *b)
 {
-	*b = *a + *b;
-	*a = *b - *a;
-	*b = *b - *a;
+	int	temp;
+
+	temp = *a;
+	*a = *b;
+	*b = temp;
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_params.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbobrov <dbobrov@student.42wolfsburg.de    +#+  +:+       +#+        */
+/*   By: dbobrov <dbobrov@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/14 20:13:26 by dbobrov           #+#    #+#             */
-/*   Updated: 2025/09/14 20:13:26 by dbobrov          ###   ########.fr       */
+/*   Created: 2025/09/16 14:33:05 by dbobrov           #+#    #+#             */
+/*   Updated: 2025/09/16 14:33:05 by dbobrov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,16 @@ void	ft_putstr(char *str)
 	write(1, str, ft_strlen(str));
 }
 
-int main(int ac, char **av)
+int	main(int ac, char **av)
 {
 	int	i;
+
+	i = 1;
+	while (i < ac)
+	{
+		ft_putstr(av[i]);
+		write(1, "\n", 1);
+		i++;
+	}
+	return (0);
 }

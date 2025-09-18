@@ -46,6 +46,24 @@ int	is_valid_base(char *base)
 	return (1);
 }
 
+int	ft_str_to_int_base(int len_base, char *str, char *base)
+{
+	int	num;
+	int	j;
+
+	while (*str)
+	{
+		j = 0;
+		while (j < len_base && *str != base[j])
+			j++;
+		if (j == len_base)
+			break ;
+		num = num * len_base + j;
+		str++;
+	}
+	return (num);
+}
+
 int	ft_atoi_base(char *str, char *base)
 {
 	int		sig;
