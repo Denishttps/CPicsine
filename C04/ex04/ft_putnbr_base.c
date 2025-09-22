@@ -62,12 +62,12 @@ void	ft_putnbr_base(int nbr, char *base)
 	num = nbr;
 	if (!is_valid_base(base))
 		return ;
-	if (nbr < 0)
+	if (num < 0)
 	{
 		ft_putchar('-');
-		nbr = -nbr;
+		num = -num;
 	}
-	if (nbr >= len_base)
-		ft_putnbr_base(nbr / len_base, base);
-	ft_putchar(base[nbr % len_base]);
+	if (num >= len_base)
+		ft_putnbr_base(num / len_base, base);
+	ft_putchar(base[num % len_base]);
 }

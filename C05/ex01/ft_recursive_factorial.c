@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbobrov <dbobrov@student.42wolfsburg.de    +#+  +:+       +#+        */
+/*   By: dbobrov <dbobrov@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/14 15:25:31 by dbobrov           #+#    #+#             */
-/*   Updated: 2025/09/14 15:25:31 by dbobrov          ###   ########.fr       */
+/*   Created: 2025/09/19 10:08:25 by dbobrov           #+#    #+#             */
+/*   Updated: 2025/09/19 10:08:25 by dbobrov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_recursive_factorial(int nb);
+int	ft_recursive_factorial(int nb);
 
-int ft_recursive_factorial(int nb)
+int	ft_recursive_factorial(int nb)
 {
 	if (nb < 0)
 		return (0);

@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbobrov <dbobrov@student.42wolfsburg.de    +#+  +:+       +#+        */
+/*   By: dbobrov <dbobrov@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/14 19:02:05 by dbobrov           #+#    #+#             */
-/*   Updated: 2025/09/14 19:02:05 by dbobrov          ###   ########.fr       */
+/*   Created: 2025/09/19 10:09:43 by dbobrov           #+#    #+#             */
+/*   Updated: 2025/09/19 10:09:43 by dbobrov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_sqrt(int nb);
+int	ft_sqrt(int nb);
 
-int ft_sqrt(int nb)
+int	ft_sqrt(int nb)
 {
 	int	left;
-	int right;
-	int mid;
+	int	right;
+	int	mid;
 
 	if (nb <= 0)
 		return (0);
@@ -27,9 +27,9 @@ int ft_sqrt(int nb)
 	while (left <= right)
 	{
 		mid = (left + right) / 2;
-		if (mid*mid == nb)
+		if (mid * mid == nb)
 			return (mid);
-		else if (mid*mid < nb)
+		else if (mid * mid < nb)
 			left = mid + 1;
 		else
 			right = mid - 1;

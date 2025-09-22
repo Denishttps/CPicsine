@@ -20,7 +20,6 @@ int	ft_iterative_power(int nb, int power)
 		return (0);
 	if (power == 0)
 		return (1);
-
 	result = 1;
 	while (power > 0)
 	{

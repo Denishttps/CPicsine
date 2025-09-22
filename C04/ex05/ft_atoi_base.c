@@ -64,27 +64,13 @@ int	ft_str_to_int_base(int len_base, char *str, char *base)
 	return (num);
 }
 
-int	ft_atoi_base(char *str, char *base)
+int	ft_to_base(char *str, char *base, int len_base)
 {
-	int		sig;
-	int		num;
-	int		len_base;
-	int		i;
-	int		j;
+	int	i;
+	int	j;
+	int	num;
 
-	sig = 1;
 	num = 0;
-	if (!is_valid_base(base))
-		return (0);
-	len_base = ft_strlen(base);
-	while (*str == ' ' || (*str >= 9 && *str <= 13))
-		str++;
-	while (*str == '+' || *str == '-')
-	{
-		if (*str == '-')
-			sig *= -1;
-		str++;
-	}
 	i = 0;
 	while (str[i])
 	{
@@ -96,5 +82,25 @@ int	ft_atoi_base(char *str, char *base)
 		num = num * len_base + j;
 		i++;
 	}
-	return (num * sig);
+	return (num);
+}
+
+int	ft_atoi_base(char *str, char *base)
+{
+	int		sig;
+	int		len_base;
+
+	sig = 1;
+	if (!is_valid_base(base))
+		return (0);
+	len_base = ft_strlen(base);
+	while (*str == ' ' || (*str >= 9 && *str <= 13))
+		str++;
+	while (*str == '+' || *str == '-')
+	{
+		if (*str == '-')
+			sig *= -1;
+		str++;
+	}
+	return (ft_to_base(str, base, len_base) * sig);
 }
