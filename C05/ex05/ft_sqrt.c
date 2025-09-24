@@ -14,9 +14,9 @@ int	ft_sqrt(int nb);
 
 int	ft_sqrt(int nb)
 {
-	int	left;
-	int	right;
-	int	mid;
+	long	left;
+	long	right;
+	long	mid;
 
 	if (nb <= 0)
 		return (0);
