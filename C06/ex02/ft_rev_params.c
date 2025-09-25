@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_rev_params.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbobrov <dbobrov@student.42wolfsburg.de>   +#+  +:+       +#+        */
+/*   By: dbobrov <dbobrov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 20:13:26 by dbobrov           #+#    #+#             */
-/*   Updated: 2025/09/16 14:37:40 by dbobrov          ###   ########.fr       */
+/*   Updated: 2025/09/25 14:05:48 by dbobrov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	main(int ac, char **av)
 	int	i;
 
 	i = ac - 1;
-	while (i > 1)
+	while (i > 0)
 	{
 		ft_putstr(av[i]);
 		write(1, "\n", 1);

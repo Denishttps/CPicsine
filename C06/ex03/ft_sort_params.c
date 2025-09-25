@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sort_params.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbobrov <dbobrov@student.42wolfsburg.de>   +#+  +:+       +#+        */
+/*   By: dbobrov <dbobrov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 20:13:26 by dbobrov           #+#    #+#             */
-/*   Updated: 2025/09/16 15:54:43 by dbobrov          ###   ########.fr       */
+/*   Updated: 2025/09/25 14:06:36 by dbobrov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,19 +29,14 @@ void	ft_putstr(char *str)
 	write(1, str, ft_strlen(str));
 }
 
-int	ft_sum_str(char *str)
+int	ft_strcmp(char *s1, char *s2)
 {
 	int	i;
-	int	sum;
 
 	i = 0;
-	sum = 0;
-	while (str[i])
-	{
-		sum += str[i];
+	while (s1[i] && s2[i] && s1[i] == s2[i])
 		i++;
-	}
-	return (sum);
+	return (s1[i] - s2[i]);
 }
 
 void	ft_sort_char_tab(char **tab, int size)
@@ -56,7 +51,7 @@ void	ft_sort_char_tab(char **tab, int size)
 		j = 1;
 		while (j < size - i)
 		{
-			if (ft_sum_str(tab[j]) > ft_sum_str(tab[j + 1]))
+			if (ft_strcmp(tab[j], tab[j + 1]) > 0)
 			{
 				temp = tab[j];
 				tab[j] = tab[j + 1];
@@ -72,13 +67,16 @@ int	main(int ac, char **av)
 {
 	int	i;
 
-	ft_sort_char_tab(av, ac);
-	i = 1;
-	while (i < ac)
+	if (ac > 1)
 	{
-		ft_putstr(av[i]);
-		write(1, "\n", 1);
-		i++;
+		ft_sort_char_tab(av, ac);
+		i = 1;
+		while (i < ac)
+		{
+			ft_putstr(av[i]);
+			write(1, "\n", 1);
+			i++;
+		}
 	}
 	return (0);
 }
